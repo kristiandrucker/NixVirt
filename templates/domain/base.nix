@@ -103,11 +103,9 @@ let
             ];
           graphics =
             {
-              type = "spice";
+              type = "vnc";
               autoport = true;
-              listen = { type = "none"; };
-              image = { compression = false; };
-              gl = { enable = virtio_video; };
+              listen = { type = "localhost"; };
             };
           sound = { model = "ich9"; };
           audio = { id = 1; type = "spice"; };
