@@ -105,7 +105,6 @@ let
             {
               type = "vnc";
               autoport = true;
-              listen = { type = "localhost"; };
             };
           sound = { model = "ich9"; };
           audio = { id = 1; type = "spice"; };
