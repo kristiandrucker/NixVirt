@@ -88,13 +88,6 @@ let
               model = if virtio_net then { type = "virtio"; } else null;
               source = { bridge = "virbr0"; };
             };
-          channel =
-            [
-              {
-                type = "spicevmc";
-                target = { type = "virtio"; name = "com.redhat.spice.0"; };
-              }
-            ];
           input =
             [
               { type = "tablet"; bus = "usb"; }
@@ -129,13 +122,6 @@ let
                     primary = true;
                   };
             };
-          redirdev =
-            [
-              { bus = "usb"; type = "spicevmc"; }
-              { bus = "usb"; type = "spicevmc"; }
-              { bus = "usb"; type = "spicevmc"; }
-              { bus = "usb"; type = "spicevmc"; }
-            ];
         };
     };
 in
